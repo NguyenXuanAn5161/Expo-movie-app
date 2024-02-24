@@ -1,12 +1,10 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import DiscountScreen from "../screens/discount/DiscountScreen";
 import HomeScreen from "../screens/home/HomeScreen";
 import ProfileScreen from "../screens/profile/ProfileScreen";
-
-const ProfileStack = createNativeStackNavigator();
-const HomeStack = createNativeStackNavigator();
+import TheaterScreen from "../screens/theater/TheaterScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +25,32 @@ const Navigation = () => {
             tabBarLabelStyle: { color: "black" },
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Theater"
+          component={TheaterScreen}
+          options={{
+            tabBarLabel: "Theater",
+            tabBarLabelStyle: { color: "black" },
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="movie-search"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Discount"
+          component={DiscountScreen}
+          options={{
+            tabBarLabel: "Discount",
+            tabBarLabelStyle: { color: "black" },
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="discount" size={size} color={color} />
             ),
           }}
         />
