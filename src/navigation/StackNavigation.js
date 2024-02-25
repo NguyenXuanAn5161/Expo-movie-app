@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DiscountScreen from "../screens/discount/DiscountScreen";
 import HomeScreen from "../screens/home/HomeScreen";
+import PlaceScreen from "../screens/home/PlaceScreen";
 import ProfileScreen from "../screens/profile/ProfileScreen";
 import TheatersScreen from "../screens/theater/TheaterScreen";
 
@@ -16,10 +17,11 @@ const HomeStackScreens = () => {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
-        name="Trang chủ"
+        name="Home"
         component={HomeScreen}
         options={{ title: "" }}
       />
+      <HomeStack.Screen name="Địa điểm" component={PlaceScreen} />
     </HomeStack.Navigator>
   );
 };
@@ -27,7 +29,7 @@ const HomeStackScreens = () => {
 const TheaterStackScreens = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Chọn rạp" component={TheatersScreen} />
+      <HomeStack.Screen name="Theater" component={TheatersScreen} />
     </HomeStack.Navigator>
   );
 };
@@ -35,7 +37,7 @@ const TheaterStackScreens = () => {
 const DiscountStackScreens = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Khuyến mãi" component={DiscountScreen} />
+      <HomeStack.Screen name="Discount" component={DiscountScreen} />
     </HomeStack.Navigator>
   );
 };
@@ -43,7 +45,7 @@ const DiscountStackScreens = () => {
 const ProfileStackScreens = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Tài khoản" component={ProfileScreen} />
+      <HomeStack.Screen name="Account" component={ProfileScreen} />
     </HomeStack.Navigator>
   );
 };
