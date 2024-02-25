@@ -1,10 +1,13 @@
 import { StyleSheet } from "react-native";
+import { PlaceContext } from "./src/context/PlaceContext";
 import Navigation from "./src/navigation/StackNavigation";
 
 export default function App() {
   return (
     <>
-      <Navigation />
+      <PlaceContext>
+        <Navigation />
+      </PlaceContext>
     </>
   );
 }
