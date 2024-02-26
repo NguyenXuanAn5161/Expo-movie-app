@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { ModalPortal } from "react-native-modals";
 import { PlaceContext } from "./src/context/PlaceContext";
 import Navigation from "./src/navigation/StackNavigation";
 
@@ -7,6 +8,7 @@ export default function App() {
     <>
       <PlaceContext>
         <Navigation />
+        <ModalPortal />
       </PlaceContext>
     </>
   );
