@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   Dimensions,
@@ -10,6 +11,8 @@ import {
 } from "react-native";
 
 const MovieCard = ({ item }) => {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView>
       <Pressable
@@ -50,6 +53,11 @@ const MovieCard = ({ item }) => {
           </Text>
         </View>
         <Pressable
+          onPress={() =>
+            navigation.navigate("Movie", {
+              title: item.title,
+            })
+          }
           style={{
             backgroundColor: "#ffc40c",
             padding: 10,

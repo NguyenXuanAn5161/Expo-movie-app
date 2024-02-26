@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DiscountScreen from "../screens/discount/DiscountScreen";
 import HomeScreen from "../screens/home/HomeScreen";
 import PlaceScreen from "../screens/home/PlaceScreen";
+import MovieDetailScreen from "../screens/movieDetail/MovieDetailScreen";
 import ProfileScreen from "../screens/profile/ProfileScreen";
 import TheatersScreen from "../screens/theater/TheaterScreen";
 
@@ -22,6 +23,7 @@ const HomeStackScreens = () => {
         options={{ title: "" }}
       />
       <HomeStack.Screen name="Địa điểm" component={PlaceScreen} />
+      <HomeStack.Screen name="Movie" component={MovieDetailScreen} />
     </HomeStack.Navigator>
   );
 };
